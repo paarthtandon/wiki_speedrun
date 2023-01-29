@@ -12,6 +12,13 @@ class Wikipedia:
         }
         self.base_url: str = f'https://api.wikimedia.org/core/v1/wikipedia/{language}/'
     
+    def page(self, title: str) -> str:
+        response = requests.get(
+            self.base_url + 'page/' + title + '/html',
+            headers = self.headers
+        )
+        return response.text
+    
     def page_links(self, title: str) -> list[str]:
         response = requests.get(
             self.base_url + 'page/' + title + '/html',

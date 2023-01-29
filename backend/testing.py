@@ -30,7 +30,7 @@ for i in range(100):
     best_score = float('-inf')
     best_pick = None
     for i in range(link_embed.shape[0]):
-        sim = util.cos_sim(goal_embed, link_embed[i])
+        sim = util.dot_score(goal_embed, link_embed[i])
         if links[i] not in visited and sim >= best_score:
             best_score = sim
             best_pick = links[i]
