@@ -3,13 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <script src="js/index.js"></script>
+    <div class="container">
+        <div id="text-box-container">
+            <input type="text" id="start-page" class="url-input" placeholder="Start Link">
+            <input type="text" id="goal-page" class="url-input" placeholder="Goal Link">
+        </div>
+        <button type="button" id="start-button" class="start-button">Start</button>
+
+        <iframe id="player-screen" class="screen" src="https://en.wikipedia.org/wiki/Main_Page"></iframe>
+        <iframe id="ai-screen" class="screen" src="https://en.wikipedia.org/wiki/Main_Page"></iframe>
+
+        <script src="js/index.js"></script>
+    </div>
 </body>
 
 </html>
